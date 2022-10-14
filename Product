@@ -1,0 +1,66 @@
+public class Product {
+
+    // Encapsulate data
+    private int productID;
+    private String Tags;
+    private double productPrice;
+    private int productQty;
+    private String productLocation;
+
+    // Create constructor
+    public Product(int ID, String tags, double price, int qty, String location) {
+
+        productID = ID;
+        Tags = tags;
+        productPrice = price;
+        productQty = qty;
+        productLocation = location;
+   }
+
+   public void setProductID(int ID) {
+        this.productID = ID;
+    }
+
+   public int getProductID()  {
+       return this.productID;
+    }
+
+    public void setPrice(int price) {
+        this.productPrice = price;
+    }
+
+    public double getProductPrice() {
+        return this.productPrice;
+    }
+
+    public void setTags(String myTags) {
+        this.Tags += myTags;
+    }
+
+    public String getTags() {
+        return this.Tags;
+    }
+
+    public void addQuantity(int qty) {
+        this.productQty += qty;
+    }
+
+    public void removeQuantity(int qty) {
+        this.productQty += qty;
+    }
+
+    public void setLocation(String location) {
+        this.productLocation = location;
+    }
+
+    public String getProductLocation() {
+        return this.productLocation;
+    }
+
+    public void setDiscount(double discountCost) {
+        //discount must be a dollar value
+
+        this.productPrice -= discountCost;
+    }
+
+}
